@@ -38,9 +38,9 @@ const isValidReport = (report) => {
   return true;
 };
 
-const isValidReportWithTolerance = (report, skipped) => {
+const isValidReportWithTolerance = (report) => {
   let isIncreasing = report[1] > report[0];
-  let hasUsedTolerance = !!skipped;
+  let hasUsedTolerance = false;
 
   for (let i = 0; i < report.length - 1; i++) {
     const curr = report[i],
