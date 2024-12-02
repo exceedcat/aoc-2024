@@ -5,6 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "type": "module",
   "author": "Daria Pronina",
   "license": "ISC",
   "description": "Advent of Code solutions fro year 2024 in JavaScript / Node.js",
