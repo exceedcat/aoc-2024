@@ -133,10 +133,10 @@ const isValidReportWithToleranceRecursion = (report, skipped) => {
         isIncreasing,
       );
       if (positiveResultForSkippedFirst) {
-        return isValidReportWithTolerance(report.slice(1), true);
+        return isValidReportWithToleranceRecursion(report.slice(1), true);
       }
     }
-    return isValidReportWithTolerance(
+    return isValidReportWithToleranceRecursion(
       [...report.slice(0, i), ...report.slice(i + 1)],
       true,
     );
