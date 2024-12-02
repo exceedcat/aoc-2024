@@ -8,7 +8,7 @@
   "type": "module",
   "author": "Daria Pronina",
   "license": "ISC",
-  "description": "Advent of Code solutions fro year 2024 in JavaScript / Node.js",
+  "description": "Advent of Code solutions for year 2024 in JavaScript / Node.js",
   "devDependencies": {
     "@eslint/js": "^9.16.0",
     "eslint": "^9.16.0",
