@@ -1,6 +1,6 @@
 import { readInput } from "../common/read-input.js";
 
-const data = readInput(2, 1, false);
+const data = readInput(2, false);
 
 const getIsIncreasing = (report) => {
   let inc = 0,
@@ -66,28 +66,18 @@ const isValidReportWithTolerance = (report) => {
         }
         continue;
       }
-    } else if (i + 2 < report.length) {
-      const nextNext = report[i + 2];
-      const isPositiveResult = checkValues(next, nextNext, nextNext > next);
-      if (isPositiveResult) {
-        if (report.length >= 4) {
-          const last = report[report.length - 1];
-          const preLast = report[report.length - 2];
-          if (
-            (nextNext > next && last > preLast) ||
-            (nextNext < next && last < preLast)
-          ) {
-            isIncreasing = nextNext > next;
-            continue;
-          }
-        } else {
+    } else if (2 < report.length) {
+      const nextNext = report[2];
+      if (nextNext > next === getIsIncreasing(report)) {
+        const isPositiveResult = checkValues(next, nextNext, nextNext > next);
+        if (isPositiveResult) {
           isIncreasing = nextNext > next;
           continue;
         }
       }
     }
     // try skipping next
-    if (i + 1 === report.length) {
+    if (i + 2 === report.length) {
       return true;
     } else {
       const nextNext = report[i + 2];
